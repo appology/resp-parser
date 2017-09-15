@@ -1,0 +1,24 @@
+{
+  "name": "resp-parser",
+  "version": "0.0.1",
+  "description": "A Nearley grammar for the RESP protocol.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node node_modules/nearley/bin/nearleyc.js grammar.ne > build/grammar.js",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appology/resp-parser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appology/resp-parser/issues"
+  },
+  "homepage": "https://github.com/appology/resp-parser#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nearley": "^2.11.0"
+  }
+}
