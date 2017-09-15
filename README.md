@@ -42,6 +42,7 @@ Results in the following output:
 **Coming soon:**
 - Simple Strings
 - Errors
+- Null Values
 
 RESP Protocol documentation can be found at:
 [https://redis.io/topics/protocol](https://redis.io/topics/protocol)
