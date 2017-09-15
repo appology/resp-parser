@@ -9,7 +9,7 @@ Main -> Expr {%
     }
 %}
 
-Expr -> (Array | String | Int) {%
+Expr -> (Array | BulkString | Integer) {%
     function(d) {
         return d[0][0];
     }
@@ -31,7 +31,7 @@ Array -> "*" int Delim Expr:+ {%
     }
 %}
 
-String -> "$" int Delim .:* Delim {%
+BulkString -> "$" int Delim .:* Delim {%
     function(d) {
 		var length = parseInt(d[1]);
 		var value = d[3].join("");
@@ -40,17 +40,17 @@ String -> "$" int Delim .:* Delim {%
 			return;
 		}
 		return {
-			type: 'String',
+			type: 'BulkString',
 			length: parseInt(d[1]),
 			value
 		};
     }
 %}
 
-Int -> ":" int Delim {%
+Integer -> ":" int Delim {%
     function(d) {
         return {
-			type: 'Int',
+			type: 'Integer',
 			value: parseInt(d[1])
 		};
     }
