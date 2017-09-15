@@ -5,6 +5,11 @@ Created with ♡ by Appology
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
+Install:
+```bash
+npm -i resp-parser --save
+```
+
 This example code:
 ```javascript
 var RespParser = require('resp-parser');
