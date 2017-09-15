@@ -1,6 +1,9 @@
 # resp-parser
 A grammar and parser for the RESP protocol.
 
+Created with ♡ by Appology
+Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
+
 This example code:
 ```javascript
 var RespParser = require('resp-parser');
@@ -19,19 +22,19 @@ Results in the following output:
         "type": "Array",
         "length": 2,
         "value": [{
-            "type": "Int",
+            "type": "Integer",
             "value": 1
         }, {
-            "type": "String",
+            "type": "BulkString",
             "length": 7,
             "value": "testing"
         }]
     }, {
-        "type": "String",
+        "type": "BulkString",
         "length": 7,
         "value": "testing"
     }]
-}]
+}]Ï
 ```
 
 **Currently supports:**
@@ -43,6 +46,7 @@ Results in the following output:
 - Simple Strings
 - Errors
 - Null Values
+- Tests
 
 RESP Protocol documentation can be found at:
 [https://redis.io/topics/protocol](https://redis.io/topics/protocol)
