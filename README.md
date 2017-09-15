@@ -2,6 +2,7 @@
 A grammar and parser for the RESP protocol.
 
 Created with ♡ by Appology
+
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
 This example code:
