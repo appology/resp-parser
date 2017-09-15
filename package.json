@@ -1,7 +1,7 @@
 {
   "name": "resp-parser",
   "version": "0.0.1",
-  "description": "A Nearley grammar for the RESP protocol.",
+  "description": "A grammar and parser for the RESP protocol.",
   "main": "index.js",
   "scripts": {
     "build": "node node_modules/nearley/bin/nearleyc.js grammar.ne > build/grammar.js",
