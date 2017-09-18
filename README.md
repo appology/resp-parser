@@ -5,12 +5,12 @@ Created with ♡ by Appology
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
-Install:
+## Install:
 ```bash
 npm -i resp-parser --save
 ```
 
-This example code:
+## This example code:
 ```javascript
 var RespParser = require('resp-parser')
 
@@ -20,7 +20,7 @@ parser.feed('*2\r\n*2\r\n:1\r\n$7\r\ntesting\r\n$7\r\ntesting\r\n')
 console.log(JSON.stringify(parser.results))
 ```
 
-Results in the following output:
+## Results in the following output:
 ```json
 [{
     "type": "Array",
@@ -44,16 +44,18 @@ Results in the following output:
 }]
 ```
 
-**Included:**
-- Integers
-- Bulk Strings
-- Arrays (including nested arrays)
-- Tests
+## Included:
+- **Supported for the following types:**
+  - Integers
+  - Bulk Strings
+  - Arrays (including nested arrays)
+- **Unit Tests**
 
-**Coming soon:**
-- Simple Strings
-- Errors
-- Null Values
+## Coming soon:
+- **Expanded support for the following types:**
+  - Simple Strings
+  - Errors
+  - Null Values
 
 *Check out the [release notes](RELEASE-NOTES.md).*
 
