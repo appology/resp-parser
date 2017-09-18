@@ -1,4 +1,5 @@
-# resp-parser
+# appology / resp-parser [![Build Status](https://travis-ci.org/appology/resp-parser.svg?branch=master)](https://travis-ci.org/appology/resp-parser)
+
 A grammar and parser for the RESP protocol.
 
 Created with ♡ by Appology
