@@ -12,7 +12,7 @@ npm -i resp-parser --save
 ```
 
 ## What does it do?
-Parses resp into an Abstract Syntax Tree (AST) for further processing.
+Parses RESP into an Abstract Syntax Tree (AST) for further processing.
 
 ### This example code:
 ```javascript
