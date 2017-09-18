@@ -12,11 +12,12 @@ npm -i resp-parser --save
 
 This example code:
 ```javascript
-var RespParser = require('resp-parser');
-var parser = new RespParser();
-parser.feed('*2\r\n*2\r\n:1\r\n$7\r\ntesting\r\n$7\r\ntesting\r\n');
+var RespParser = require('resp-parser')
 
-console.log(JSON.stringify(parser.parse()));
+var parser = new RespParser()
+parser.feed('*2\r\n*2\r\n:1\r\n$7\r\ntesting\r\n$7\r\ntesting\r\n')
+
+console.log(JSON.stringify(parser.results))
 ```
 
 Results in the following output:
@@ -40,19 +41,19 @@ Results in the following output:
         "length": 7,
         "value": "testing"
     }]
-}]Ï
+}]
 ```
 
-**Currently supports:**
+**Included:**
 - Integers
 - Bulk Strings
 - Arrays (including nested arrays)
+- Tests
 
 **Coming soon:**
 - Simple Strings
 - Errors
 - Null Values
-- Tests
 
 RESP Protocol documentation can be found at:
 [https://redis.io/topics/protocol](https://redis.io/topics/protocol)

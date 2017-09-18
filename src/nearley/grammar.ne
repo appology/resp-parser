@@ -1,4 +1,4 @@
-# RESP grammar for Nearley
+# RESP grammar for Nearley (https://nearley.js.org/)
 # Created with ♡ by Appology
 
 @builtin "number.ne"

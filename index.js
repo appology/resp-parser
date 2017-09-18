@@ -1,14 +1,3 @@
-const nearley = require('nearley');
-const grammar = require('./build/grammar');
+var lib = require('./bin/lib')
 
-const Parser = function () {
-    var parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
-    return {
-        feed: function (f) { parser.feed(f) },
-        parse: function () { 
-            return parser.results && parser.results.filter(function(i){return !!i});
-        }
-    }
-};
-
-module.exports = Parser;
+module.exports = lib;
