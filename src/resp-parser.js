@@ -2,7 +2,7 @@ import nearley from 'nearley'
 import grammar from './nearley/grammar'
 
 class Parser {
-  constructor(){
+  constructor() {
     this._parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
   }
 
@@ -11,7 +11,8 @@ class Parser {
   }
 
   get results() {
-    return this._parser.results && this._parser.results.filter(function(i){return !!i})
+    var results = this._parser.results
+    return results && results.filter(i => !!i)
   }
 }
 
