@@ -55,5 +55,7 @@ Results in the following output:
 - Errors
 - Null Values
 
+*Check out the [release notes](RELEASE-NOTES.md).*
+
 RESP Protocol documentation can be found at:
 [https://redis.io/topics/protocol](https://redis.io/topics/protocol)
