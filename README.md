@@ -1,6 +1,6 @@
 # appology / resp-parser [![Build Status](https://travis-ci.org/appology/resp-parser.svg?branch=master)](https://travis-ci.org/appology/resp-parser)
 
-A grammar and parser for the RESP protocol.
+A grammar and stream-friendly parser for the RESP protocol.
 
 Created with ♡ by Appology
 
@@ -11,11 +11,15 @@ Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser t
 npm -i resp-parser --save
 ```
 
-## This example code:
+## What does it do?
+Parses resp into an Abstract Syntax Tree (AST) for further processing.
+
+### This example code:
 ```javascript
 var RespParser = require('resp-parser')
 
 var parser = new RespParser()
+// optional: call feed more than once if needed
 parser.feed('*2\r\n*2\r\n:1\r\n$7\r\ntesting\r\n$7\r\ntesting\r\n')
 
 console.log(JSON.stringify(parser.results))
@@ -46,11 +50,11 @@ console.log(JSON.stringify(parser.results))
 ```
 
 ## Included:
-- **Supported for the following types:**
+- **Support for the following types:**
   - Integers
   - Bulk Strings
   - Arrays (including nested arrays)
-- **Unit Tests**
+- Unit Tests
 
 ## Coming soon:
 - **Expanded support for the following types:**
