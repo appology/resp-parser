@@ -1,3 +1,3 @@
-var lib = require('./bin/lib')
+var lib = require('./lib')
 
 module.exports = lib;
