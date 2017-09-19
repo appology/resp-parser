@@ -3,19 +3,19 @@
 
 @builtin "number.ne"
 
-Main -> Expr {%
-  function(d) {
-    return d[0]
-  }
-%}
-
-Expr -> (Array | BulkString | Integer) {%
+Main -> (Expr:+ | SimpleString | Error) {%
   function(d) {
     return d[0][0]
   }
 %}
 
-Array -> "*" int Delim Expr:+ {%
+Expr -> (Array | NullArray | BulkString | NullBulkString | Integer) {%
+  function(d) {
+    return d[0][0]
+  }
+%}
+
+Array -> "*" int CRLF Expr:* {%
   function(d) {
     var length = parseInt(d[1])
     var value = d[3]
@@ -29,13 +29,21 @@ Array -> "*" int Delim Expr:+ {%
     
     return {
       type: 'Array',
-      length: parseInt(d[1]),
-      value: d[3]
+      length,
+      value
     }
   }
 %}
 
-BulkString -> "$" int Delim .:* Delim {%
+NullArray -> "*-1" CRLF {%
+  function(d) {
+    return {
+      type: 'NullArray'
+    }
+  }
+%}
+
+BulkString -> "$" int CRLF .:* CRLF {%
   function(d) {
     var length = parseInt(d[1])
     var value = d[3].join("")
@@ -44,19 +52,50 @@ BulkString -> "$" int Delim .:* Delim {%
     }
     return {
       type: 'BulkString',
-      length: parseInt(d[1]),
+      length,
       value
     }
   }
 %}
 
-Integer -> ":" int Delim {%
+NullBulkString -> "-1" CRLF {%
   function(d) {
     return {
+      type: 'NullBulkString'
+    }
+  }
+%}
+
+SimpleString -> [\+] .:* CRLF {%
+  function(d) {
+    var value = d[1].join("")
+    return {
+      type: 'SimpleString',
+      value
+    }
+  }
+%}
+
+Error -> "-" [^ ]:+ [ ] .:* CRLF {%
+  function(d) {
+    var errorPrefix = d[1].join("")
+    var message = d[3].join("")
+    return {
+      type: 'Error',
+      errorPrefix,
+      message
+    }
+  }
+%}
+
+Integer -> ":" int CRLF {%
+  function(d) {
+    var value = d[1]
+    return {
       type: 'Integer',
-      value: parseInt(d[1])
+      value
     };
   }
 %}
 
-Delim -> [\r] [\n]
+CRLF -> [\r] [\n]

@@ -1,6 +1,14 @@
 import test from 'ava'
 import RespParser from '../src'
 
+test('empty-array', t => {
+  var parser = new RespParser()
+  parser.feed('*0\r\n')
+  var value = parser.results
+  var expected = [{"type":"Array","length":0,"value":[]}]
+  t.deepEqual(value, expected, 'Parsed value does not match expected result')
+})
+
 test('integer-array', t => {
   var parser = new RespParser()
   parser.feed('*2\r\n:0\r\n:1\r\n')

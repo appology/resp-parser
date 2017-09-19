@@ -1,5 +1,15 @@
 #Release Notes
 
+## v0.0.8
+
+### Updates
+- Added support & tests for:
+  - Simple Strings
+  - Null Bulk Strings
+  - Null Arrays
+  - Errors
+  - Pipelining
+
 ## v0.0.7
 
 ### Updates

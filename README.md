@@ -52,15 +52,17 @@ console.log(JSON.stringify(parser.results))
 ## Included:
 - **Support for the following types:**
   - Integers
+  - Simple Strings
   - Bulk Strings
+  - Null Bulk Strings
   - Arrays (including nested arrays)
+  - Null Arrays
+  - Errors
 - Unit Tests
 
 ## Coming soon:
 - **Expanded support for the following types:**
-  - Simple Strings
-  - Errors
-  - Null Values
+  - Tools for dealing with ASTs from this parser
 
 *Check out the [release notes](RELEASE-NOTES.md).*
 
