@@ -4,9 +4,9 @@
   "description": "A grammar and parser for the RESP protocol.",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node scripts/build.js",
     "postinstall": "npm run build",
-    "test": "node test.js"
+    "test": "node scripts/test.js"
   },
   "repository": {
     "type": "git",
