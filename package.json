@@ -26,7 +26,8 @@
     "build": "node scripts/build.js",
     "example": "node scripts/example.js",
     "test": "node scripts/test.js",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "postinstall": "postinstall-build lib --script build"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,8 @@
   },
   "homepage": "https://github.com/appology/resp-parser#readme",
   "dependencies": {
-    "nearley": "^2.11.0"
+    "nearley": "^2.11.0",
+    "postinstall-build": "^5.0.1"
   },
   "devDependencies": {
     "shelljs": "^0.7.8",
