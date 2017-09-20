@@ -2,6 +2,9 @@
 
 ## v0.0.8
 
+### Breaking Changes
+- RespParser: .results property returns an object instead of an array.
+
 ### Updates
 - Added support & tests for:
   - Simple Strings
@@ -20,7 +23,7 @@
 ## v0.0.6
 
 ### Breaking Changes
-- Removed respParser.parse() method. Use .results property instead.
+- RespParser: Removed .parse() instance method. Use .results property instead.
 
 ### Updates
 - Added tests.
