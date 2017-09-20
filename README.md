@@ -58,6 +58,7 @@ console.log(JSON.stringify(parser.results))
   - Arrays (including nested arrays)
   - Null Arrays
   - Errors
+  - Piplines
 - Unit Tests
 
 ## Coming soon:
