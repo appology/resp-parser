@@ -40,7 +40,8 @@
   },
   "homepage": "https://github.com/appology/resp-parser#readme",
   "dependencies": {
-    "nearley": "^2.11.0"
+    "nearley": "^2.11.0",
+    "shelljs": "^0.7.8"
   },
   "devDependencies": {
     "ava": "^0.22.0",
@@ -56,8 +57,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "npm-watch": "^0.2.0",
-    "prettyjson": "^1.2.1",
-    "shelljs": "^0.7.8"
+    "prettyjson": "^1.2.1"
   },
   "ava": {
     "require": [
