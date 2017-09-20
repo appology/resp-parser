@@ -3,30 +3,26 @@
 
 @builtin "number.ne"
 
-Main -> (Expr:+ | SimpleString | Error) {%
+Main -> (Anything:+ | SimpleString | Error) {%
   function(d) {
-    return d[0][0]
+    var value = d[0][0]
+    if(Array.isArray(value) && value.length == 1){
+      value = value[0];
+    }
+    return value
   }
 %}
 
-Expr -> (Array | NullArray | BulkString | NullBulkString | Integer) {%
-  function(d) {
-    return d[0][0]
-  }
-%}
-
-Array -> "*" int CRLF Expr:* {%
-  function(d) {
+Array -> "*" int CRLF (AnyArray:* | AnyPrimitive:*) {%
+  function(d,l,reject) {
     var length = parseInt(d[1])
-    var value = d[3]
-    if(value && value.length != length) {
-      return
+    var value = d[3][0]
+
+    if(value && value.length != length)
+    {
+      return reject
     }
 
-    if(value && value.filter(i => !i).length > 0) {
-      return
-    }
-    
     return {
       type: 'Array',
       length,
@@ -43,12 +39,19 @@ NullArray -> "*-1" CRLF {%
   }
 %}
 
-BulkString -> "$" int CRLF .:* CRLF {%
+AnyArray -> (Array | NullArray) {%
   function(d) {
+    var value = d[0][0]
+    return value
+  }
+%}
+
+BulkString -> "$" int CRLF .:* CRLF {%
+  function(d,l,reject) {
     var length = parseInt(d[1])
     var value = d[3].join("")
     if(value && value.length != length) {
-      return
+      return reject
     }
     return {
       type: 'BulkString',
@@ -63,6 +66,30 @@ NullBulkString -> "-1" CRLF {%
     return {
       type: 'NullBulkString'
     }
+  }
+%}
+
+Integer -> ":" int CRLF {%
+  function(d) {
+    var value = d[1]
+    return {
+      type: 'Integer',
+      value
+    };
+  }
+%}
+
+AnyPrimitive -> (BulkString | NullBulkString | Integer) {%
+  function(d) {
+    var value = d[0][0]
+    return value
+  }
+%}
+
+Anything -> (AnyArray | AnyPrimitive) {%
+  function(d) {
+    var value = d[0][0]
+    return value
   }
 %}
 
@@ -85,16 +112,6 @@ Error -> "-" [^ ]:+ [ ] .:* CRLF {%
       errorPrefix,
       message
     }
-  }
-%}
-
-Integer -> ":" int CRLF {%
-  function(d) {
-    var value = d[1]
-    return {
-      type: 'Integer',
-      value
-    };
   }
 %}
 
