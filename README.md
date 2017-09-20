@@ -27,7 +27,7 @@ console.log(JSON.stringify(parser.results))
 
 ### Results in the following output:
 ```json
-[{
+{
     "type": "Array",
     "length": 2,
     "value": [{
@@ -46,7 +46,7 @@ console.log(JSON.stringify(parser.results))
         "length": 7,
         "value": "testing"
     }]
-}]
+}
 ```
 
 ## Included:
