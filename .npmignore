@@ -1,4 +1,7 @@
-node_modules
-src
-quokka
-test
+*
+!lib
+!index.js
+!LICENSE
+!README.md
+!RELEASE-NOTES.md
+!package.json
