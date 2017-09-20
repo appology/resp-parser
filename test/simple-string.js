@@ -5,7 +5,7 @@ test('simple-string', t => {
   var parser = new RespParser()
   parser.feed('+OK\r\n')
   var value = parser.results
-  var expected = [{"type":"SimpleString","value":"OK"}]
+  var expected = {"type":"SimpleString","value":"OK"}
   t.deepEqual(value, expected, 'Parsed value does not match expected result')
 })
 

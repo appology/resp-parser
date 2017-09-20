@@ -5,7 +5,7 @@ test('error', t => {
   var parser = new RespParser()
   parser.feed('-ERR An error occurred\r\n')
   var value = parser.results
-  var expected = [{"type":"Error","errorPrefix":"ERR","message":"An error occurred"}]
+  var expected = {"type":"Error","errorPrefix":"ERR","message":"An error occurred"}
   t.deepEqual(value, expected, 'Parsed value does not match expected result')
 })
 
