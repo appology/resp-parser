@@ -1,5 +1,5 @@
 # RESP grammar for Nearley (https://nearley.js.org/)
-# Created with ♡ by Appology
+# Crafted with ♡ by Appology
 
 @builtin "number.ne"
 
