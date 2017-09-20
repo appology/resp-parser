@@ -3,6 +3,7 @@
     "editor.detectIndentation": false,
     "files.exclude": {
       "node_modules/": true,
-      "src/nearley/grammar.js" : true
+      "src/grammar.js" : true,
+      "lib" : true
     }
   }

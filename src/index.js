@@ -1,3 +1,3 @@
-import RespParser from './resp-parser'
+import Parser from './parser'
 
-module.exports = RespParser
+module.exports = Parser

@@ -1,5 +1,5 @@
 import nearley from 'nearley'
-import grammar from './nearley/grammar'
+import grammar from './grammar'
 
 class Parser {
   constructor() {
