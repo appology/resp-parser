@@ -12,7 +12,7 @@ class Parser {
 
   get results() {
     var results = this._parser.results
-    return results && results.filter(i => !!i)
+    return results[0];
   }
 }
 
