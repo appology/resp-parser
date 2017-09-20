@@ -1,5 +1,5 @@
 *
-!lib
+!lib/*
 !index.js
 !LICENSE
 !README.md
