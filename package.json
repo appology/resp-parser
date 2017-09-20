@@ -40,10 +40,10 @@
   },
   "homepage": "https://github.com/appology/resp-parser#readme",
   "dependencies": {
+    // deps
     "nearley": "^2.11.0",
-    "shelljs": "^0.7.8"
-  },
-  "devDependencies": {
+    // dev-deps
+    "shelljs": "^0.7.8",
     "ava": "^0.22.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
