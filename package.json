@@ -32,8 +32,8 @@
     "type": "git",
     "url": "git+https://github.com/appology/resp-parser.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "appology",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/appology/resp-parser/issues"
   },
