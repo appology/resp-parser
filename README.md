@@ -8,7 +8,7 @@ Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser t
 
 ## Install:
 ```bash
-npm -i resp-parser --save
+npm i resp-parser --save
 ```
 
 ## What does it do?
