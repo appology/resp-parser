@@ -1,6 +1,6 @@
 {
   "name": "resp-parser",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A grammar and parser for the RESP protocol.",
   "main": "index.js",
   "watch": {
