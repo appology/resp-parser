@@ -1,6 +1,8 @@
 var shell = require('shelljs')
+var path = require('path')
 
-if(shell.exec('node node_modules/nearley/bin/nearleyc.js src/grammar.ne > src/grammar.js --color=always').code != 0) {
+const nearleyc_path = path.join(__dirname, 'node_modules/nearley/bin/nearleyc.js')
+if(shell.exec('node ' + nearleyc_path + ' src/grammar.ne > src/grammar.js --color=always').code != 0) {
   shell.exit(1);
 }
 
