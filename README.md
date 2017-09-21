@@ -62,7 +62,6 @@ console.log(JSON.stringify(parser.results))
 - Unit Tests
 
 ## Coming soon:
-- **Expanded support for the following types:**
   - Tools for dealing with ASTs from this parser
 
 *Check out the [release notes](RELEASE-NOTES.md).*
