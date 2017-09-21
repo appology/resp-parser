@@ -6,6 +6,12 @@ Crafted with ♡ by Appology
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
+## Before you install...
+Please keep in mind that until this project is not yet battle tested. If you are using it and would like recognition, send a message to [support@appology.net](mailto://support@appology.net).
+
+## Issues?
+You can submit new issues using [GitHub Issues](https://github.com/appology/resp-parser/issues)
+
 ## Install:
 ```bash
 npm i resp-parser --save
