@@ -1,5 +1,10 @@
 #Release Notes
 
+## v0.1.2
+
+### Updates
+- README changes.
+
 ## v0.1.1
 
 ### Updates
