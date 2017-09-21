@@ -1,5 +1,10 @@
 #Release Notes
 
+## v0.1.0
+
+### Updates
+- Tested and fixed package installation from npm.
+
 ## v0.0.8
 
 ### Breaking Changes
