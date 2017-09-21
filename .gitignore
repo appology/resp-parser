@@ -1,4 +1,4 @@
-node_modules
-lib
-src/grammar.js
-quokka
+/node_modules
+/lib
+/src/grammar.js
+/quokka
