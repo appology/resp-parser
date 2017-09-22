@@ -6,6 +6,8 @@ Crafted with ♡ by Appology
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
+Bootstrapped with [nearley-template](https://github.com/appology/nearley-template).
+
 ## Before you install...
 Please keep in mind that this project is not yet battle tested.
 
